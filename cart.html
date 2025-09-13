@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: url('IMG_2681.PNG') no-repeat center center fixed;
+            background-size: cover;
+            filter: brightness(0.8); /* 淡化背景 */
+        }
+
+        main {
+            padding: 20px;
+            color: white;
+            display: flex;
+            justify-content: center;
+        }
+
+        .cart-container {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            width: 80%;
+        }
+
+        .cart-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* 两列布局 */
+            gap: 20px; /* 每个商品之间的间距 */
+        }
+
+        .cart-item {
+            display: flex;
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 10px;
+            border-radius: 8px;
+            align-items: center;
+        }
+
+        .cart-item img {
+            width: 100px;
+            height: auto;
+            margin-right: 10px;
+        }
+
+        .cart-item div {
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        .cart-item button {
+            margin-top: 10px;
+            padding: 5px 10px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .cart-item button:hover {
+            background-color: #0056b3;
+        }
+
+        .checkout-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            display: block;
+            text-align: center;
+            width: 100%;
+        }
+
+        .checkout-button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Shopping Cart</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="cart.html">Shopping Cart</a>
+            <a href="confirm.html">Confirm Order</a>
+            <a href="logout.html">Logout</a>
+        </nav>
+    </header>
+    <main>
+        <div class="cart-container">
+            <h2>Your Cart</h2>
+            <div class="cart-grid">
+                <div class="cart-item">
+                    <img src="P1.PNG" alt="Product 1">
+                    <div>
+                        <p>Product Name: Example Product 1</p>
+                        <p>Price:799 $</p>
+                        <button>Remove</button>
+                    </div>
+                </div>
+                <div class="cart-item">
+                    <img src="P2.PNG" alt="Product 2">
+                    <div>
+                        <p>Product Name: Example Product 2</p>
+                        <p>Price: $799</p>
+                        <button>Remove</button>
+                    </div>
+                </div>
+                <div class="cart-item">
+                    <img src="P3.PNG" alt="Product 3">
+                    <div>
+                        <p>Product Name: Example Product 3</p>
+                        <p>Price: $799</p>
+                        <button>Remove</button>
+                    </div>
+                </div>
+                <div class="cart-item">
+                    <img src="P4.PNG" alt="Product 4">
+                    <div>
+                        <p>Product Name: Example Product 4</p>
+                        <p>Price: $799</p>
+                        <button>Remove</button>
+                    </div>
+                </div>
+                <div class="cart-item">
+                    <img src="P5.PNG" alt="Product 5">
+                    <div>
+                        <p>Product Name: Example Product 5</p>
+                        <p>Price: $899</p>
+                        <button>Remove</button>
+                    </div>
+                </div>
+                <div class="cart-item">
+                    <img src="P6.PNG" alt="Product 6">
+                    <div>
+                        <p>Product Name: Example Product 6</p>
+                        <p>Price: $999</p>
+                        <button>Remove</button>
+                    </div>
+                </div>
+                <div class="cart-item">
+                    <img src="P7.PNG" alt="Product 7">
+                    <div>
+                        <p>Product Name: Example Product 7</p>
+                        <p>Price: $699</p>
+                        <button>Remove</button>
+                    </div>
+                </div>
+                <div class="cart-item">
+                    <img src="P8.PNG" alt="Product 8">
+                    <div>
+                        <p>Product Name: Example Product 8</p>
+                        <p>Price: $699</p>
+                        <button>Remove</button>
+                    </div>
+                </div>
+                <div class="cart-item">
+                    <img src="P9.PNG" alt="Product 9">
+                    <div>
+                        <p>Product Name: Example Product 9</p>
+                        <p>Price: $1199</p>
+                        <button>Remove</button>
+                    </div>
+                </div>
+                <div class="cart-item">
+                    <img src="P10.PNG" alt="Product 10">
+                    <div>
+                        <p>Product Name: Example Product 10</p>
+                        <p>Price: $1199</p>
+                        <button>Remove</button>
+                    </div>
+                </div>
+            </div>
+            <button class="checkout-button">Proceed to Checkout</button>
+        </div>
+    </main>
+    <footer>
+        <p>© 2025 Nathan        <script>
+            // 检查用户是否登录
+            if (!sessionStorage.getItem('loggedInUser')) {
+                alert('Please login to view your cart.');
+                window.location.href = 'index.html';
+            }
+        
+            // 动态加载商品信息
+            fetch('resources.json')
+                .then(response => response.json())
+                .then(data => {
+                    const cartGrid = document.querySelector('.cart-grid');
+                    data.forEach(item => {
+                        cartGrid.innerHTML += `
+                            <div class="cart-item">
+                                <img src="${item.image}" alt="${item.name}">
+                                <div>
+                                    <p>Product Name: ${item.name}</p>
+                                    <p>Price: $${item.price}</p>
+                                    <button onclick="addToCart('${item.id}')">Add to Cart</button>
+                                </div>
+                            </div>
+                        `;
+                    });
+                });
+        
+            // 添加商品到购物车
+            function addToCart(itemId) {
+                const cart = JSON.parse(localStorage.getItem('cart')) || [];
+                const item = { id: itemId, quantity: 1 };
+                cart.push(item);
+                localStorage.setItem('cart', JSON.stringify(cart));
+                alert('Item added to cart!');
+            }
+        </script></p>
+    </footer>
+</body>
+</html>

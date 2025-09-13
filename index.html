@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>441 Project - Home</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: url('IMG_2681.PNG') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        header {
+            text-align: center;
+            color: white;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        nav a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+
+        main {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 80vh;
+            color: white;
+        }
+
+        .form-container {
+            display: flex;
+            flex-direction: column;
+            width: 300px;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .form-container label {
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .form-container input {
+            margin-bottom: 15px;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .form-container button {
+            padding: 10px;
+            font-size: 16px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .form-container button:hover {
+            background-color: #0056b3;
+        }
+
+        footer {
+            text-align: center;
+            color: white;
+            padding: 10px;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to 441 E-commerce</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="cart.html">Shopping Cart</a>
+            <a href="confirm.html">Confirm Order</a>
+            <a href="logout.html">Logout</a>
+        </nav>
+    </header>    <main>
+        <!-- 横幅广告 -->
+        <section class="banner">
+            <h2>Welcome to 441 E-commerce</h2>
+            <p>Explore our IT courses and training resources to enhance your skills!</p>
+        </section>
+    
+        <!-- 注册表单 -->
+        <div class="form-container">
+            <h2>Register</h2>
+            <form id="registerForm">
+                <label for="regUsername">Username:</label>
+                <input type="text" id="regUsername" required>
+                <label for="regPassword">Password:</label>
+                <input type="password" id="regPassword" required>
+                <button type="submit">Register</button>
+            </form>
+        </div>
+    
+        <!-- 登录表单 -->
+        <div class="form-container">
+            <h2>Login</h2>
+            <form id="loginForm">
+                <label for="loginUsername">Username:</label>
+                <input type="text" id="loginUsername" required>
+                <label for="loginPassword">Password:</label>
+                <input type="password" id="loginPassword" required>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </main>
+    <script>
+        // 注册表单逻辑
+        document.getElementById('registerForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            const username = document.getElementById('regUsername').value;
+            const password = document.getElementById('regPassword').value;
+    
+            localStorage.setItem(username, JSON.stringify({ password }));
+            alert('Registration successful!');
+        });
+    
+        // 登录表单逻辑
+        document.getElementById('loginForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            const username = document.getElementById('loginUsername').value;
+            const password = document.getElementById('loginPassword').value;
+    
+            const user = JSON.parse(localStorage.getItem(username));
+            if (user && user.password === password) {
+                sessionStorage.setItem('loggedInUser', username);
+                alert('Login successful!');
+                window.location.href = 'cart.html';
+            } else {
+                alert('Invalid credentials!');
+            }
+        });
+    </script>
+    <main>
+        <!-- 注册表单 -->
+        <div class="form-container">
+            <h2>Register</h2>
+            <form id="registerForm">
+                <label for="regUsername">Username:</label>
+                <input type="text" id="regUsername" required>
+                <label for="regPassword">Password:</label>
+                <input type="password" id="regPassword" required>
+                <button type="submit">Register</button>
+            </form>
+        </div>
+
+        <!-- 登录表单 -->
+        <div class="form-container">
+            <h2>Login</h2>
+            <form id="loginForm">
+                <label for="loginUsername">Username:</label>
+                <input type="text" id="loginUsername" required>
+                <label for="loginPassword">Password:</label>
+                <input type="password" id="loginPassword" required>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <p>© 2025 Nathan</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
