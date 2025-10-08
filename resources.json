@@ -1,0 +1,83 @@
+[
+  {
+    "id": 1,
+    "unitNumber": "ICTWEB418",
+    "title": "Web Programming Fundamentals Kit",
+    "description": "Comprehensive resources for teaching basic web programming concepts and techniques.",
+    "price": 129.99,
+    "image": "resource1.jpg"
+  },
+  {
+    "id": 2,
+    "unitNumber": "ICTWEB526",
+    "title": "Advanced CSS Framework Kit",
+    "description": "Complete set of materials for teaching modern CSS frameworks and responsive design.",
+    "price": 149.99,
+    "image": "resource2.jpg"
+  },
+  {
+    "id": 3,
+    "unitNumber": "ICTDBS403",
+    "title": "Database Design Resource Pack",
+    "description": "Teaching resources covering relational database design and SQL fundamentals.",
+    "price": 119.99,
+    "image": "resource3.jpg"
+  },
+  {
+    "id": 4,
+    "unitNumber": "ICTNWK504",
+    "title": "Network Security Teaching Kit",
+    "description": "Practical materials for demonstrating network security principles and practices.",
+    "price": 189.99,
+    "image": "resource4.jpg"
+  },
+  {
+    "id": 5,
+    "unitNumber": "ICTPRG533",
+    "title": "JavaScript Framework Essentials",
+    "description": "Resources for teaching modern JavaScript frameworks and libraries.",
+    "price": 159.99,
+    "image": "resource5.jpg"
+  },
+  {
+    "id": 6,
+    "unitNumber": "ICTDAM502",
+    "title": "Data Analysis Fundamentals",
+    "description": "Materials for teaching basic data analysis concepts and tools.",
+    "price": 139.99,
+    "image": "resource6.jpg"
+  },
+  {
+    "id": 7,
+    "unitNumber": "ICTDEV601",
+    "title": "Software Development Lifecycle Kit",
+    "description": "Comprehensive resources covering the entire software development process.",
+    "price": 169.99,
+    "image": "resource7.jpg"
+  },
+  {
+    "id": 8,
+    "unitNumber": "ICTMobile502",
+    "title": "Mobile App Development Resources",
+    "description": "Teaching materials for cross-platform mobile application development.",
+    "price": 179.99,
+    "image": "resource8.jpg"
+  },
+  {
+    "id": 9,
+    "unitNumber": "ICTCloud501",
+    "title": "Cloud Computing Essentials",
+    "description": "Resources covering cloud service models and deployment strategies.",
+    "price": 149.99,
+    "image": "resource9.jpg"
+  },
+  {
+    "id": 10,
+    "unitNumber": "ICTSYS601",
+    "title": "System Administration Fundamentals",
+    "description": "Practical materials for teaching system administration concepts.",
+    "price": 159.99,
+    "image": "resource10.jpg"
+  }
+]
+    

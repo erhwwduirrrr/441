@@ -1,0 +1,43 @@
+[
+  {
+    "id": 1,
+    "title": "Web Development Fundamentals",
+    "description": "Learn the basics of HTML, CSS, and JavaScript for building modern websites.",
+    "assessment": "4 assignments, 1 final project, practical exam",
+    "duration": "8 weeks",
+    "sampleProjects": "Personal portfolio website"
+  },
+  {
+    "id": 2,
+    "title": "Advanced JavaScript",
+    "description": "Master advanced JavaScript concepts including async programming, design patterns, and frameworks.",
+    "assessment": "3 coding challenges, 1 research paper, final project",
+    "duration": "10 weeks",
+    "sampleProject": "Interactive web application with API integration"
+  },
+  {
+    "id": 3,
+    "title": "Network Security Essentials",
+    "description": "Understand network vulnerabilities, security protocols, and defense mechanisms.",
+    "assessment": "2 case studies, 1 lab report, written exam",
+    "duration": "6 weeks",
+    "sampleProject": "Network security audit report"
+  },
+  {
+    "id": 4,
+    "title": "Database Design and Management",
+    "description": "Learn to design relational databases, write SQL queries, and manage database systems.",
+    "assessment": "3 practical exercises, database design project, written exam",
+    "duration": "8 weeks",
+    "sampleProject": "Relational database for e-commerce platform"
+  },
+  {
+    "id": 5,
+    "title": "Mobile App Development",
+    "description": "Develop cross-platform mobile applications using modern frameworks and tools.",
+    "assessment": "2 mini-projects, 1 final app, presentation",
+    "duration": "12 weeks",
+    "sampleProject": "Utility mobile application with backend integration"
+  }
+]
+    

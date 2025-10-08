@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resources - TechSkills Australia Institute Pty Ltd</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <header>
+        <nav class="navbar">
+          <div class="logo">
+    <svg class="logo-svg" width="240" height="60" viewBox="0 0 240 60" xmlns="http://www.w3.org/2000/svg">
+        <!-- 背景图形 -->
+        <rect x="5" y="5" width="50" height="50" rx="5" fill="#1E88E5" opacity="0.8"/>
+        <path d="M30,15 L50,35 L30,55 Z" fill="#FFFFFF"/>
+        <path d="M30,20 L45,35 L30,50 Z" fill="#1E88E5"/>
+        
+        <!-- 文字部分 -->
+        <text x="70" y="25" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#333333">TechSkills</text>
+        <text x="70" y="45" font-family="Arial, sans-serif" font-size="10" fill="#555555">Australia Institute</text>
+        
+        <!-- 装饰元素 -->
+        <circle cx="220" cy="30" r="8" fill="#FFC107" opacity="0.8"/>
+        <circle cx="220" cy="30" r="4" fill="#FF9800"/>
+    </svg>
+</div>
+            <ul class="nav-links">
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="courses.html"><i class="fas fa-graduation-cap"></i> Courses</a></li>
+                <li><a href="resources.html" class="active"><i class="fas fa-box"></i> Resources</a></li>
+                <li><a href="cart.html" id="cart-link"><i class="fas fa-shopping-cart"></i> Cart</a></li>
+                <li><a href="login.html" id="login-link"><i class="fas fa-user"></i> Login</a></li>
+                <li><a href="register.html" id="register-link"><i class="fas fa-user-plus"></i> Register</a></li>
+                <li><a href="orders.html" id="orders-link" style="display: none;"><i class="fas fa-history"></i> Orders</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- 资源页面 -->
+    <section class="resources-page">
+        <div class="container">
+            <h2>Training Resource Kits</h2>
+            <p>High-quality resources for other RTOs to enhance their IT training programs.</p>
+            
+            <div class="resource-list" id="resources-container">
+                <!-- 资源将通过JavaScript动态加载 -->
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="courses.html">Courses</a></li>
+                        <li><a href="resources.html">Resources</a></li>
+                        <li><a href="login.html">Login</a></li>
+                        <li><a href="register.html">Register</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Level 8, 123 Queen Street, Melbourne, Victoria 3000, Australia</p>
+                    <p><i class="fas fa-phone"></i> +61 3 9670 8899</p>
+                    <p><i class="fas fa-envelope"></i> info@techskills.edu.au</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 TechSkills Australia Institute Pty Ltd. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="resources.js"></script>
+</body>
+</html>
+    
